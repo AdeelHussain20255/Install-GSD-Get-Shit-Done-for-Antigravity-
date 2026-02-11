@@ -1,0 +1,32 @@
+I'll help you install this Chrome extension. Let me fetch the repository to see the installation instructions.Based on the README, here's how to install GSD (Get Shit Done) for Antigravity:
+
+## Installation Steps
+
+For Windows (PowerShell):
+In powershell Terminal:
+
+# Navigate to your project directory
+cd your-project-name
+
+# Clone the GSD template to ur project folder
+git clone https://github.com/toonight/get-shit-done-for-antigravity.git gsd-template
+
+# Copy the files to your project / Run these after cloning in the powershell 
+Copy-Item -Recurse gsd-template\.agent .\
+Copy-Item -Recurse gsd-template\.gemini .\
+Copy-Item -Recurse gsd-template\.gsd .\
+
+# Clean up
+Remove-Item -Recurse -Force gsd-template
+```
+
+## After Installation
+
+Once installed, run `/new-project` in Antigravity (side agent) and follow the prompts to initialize your project.
+
+This will set up:
+- `.agent/` - 21 slash commands and 8 agent specializations
+- `.gemini/` - Rules enforcement
+- `.gsd/` - Your project specs, roadmap, state, and documentation
+
+The system uses a spec-driven approach where you describe what you want, and the AI builds it with proper context engineering and atomic git commits.
